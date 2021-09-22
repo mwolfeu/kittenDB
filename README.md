@@ -2,6 +2,8 @@
 
 Log in to AWS with your root credentials.  Serverless will invoke the browser to create IAM accounts if needed.
 
+This is completely working code based on the video: https://www.youtube.com/watch?v=LXB2Nv9ygQc
+
 ## In a terminal:
 
 ```bash
@@ -11,6 +13,17 @@ Log in to AWS with your root credentials.  Serverless will invoke the browser to
     # serverless may create an IAM account if needed and store the secrets in ~/.aws
   cd kittenDB
   sls deploy --stage dev
+```
+## In the output you should see a section like:
+### Note the enpoint urls to use with curl or test-rest.http
+```bash
+endpoints:
+  POST - https://xxx.execute-api.us-east-1.amazonaws.com/dev/hello
+  POST - https://xxx.execute-api.us-east-1.amazonaws.com/dev/v1/kitten
+  GET - https://xxx.execute-api.us-east-1.amazonaws.com/dev/v1/kitten
+  GET - https://xxx.execute-api.us-east-1.amazonaws.com/dev/v1/kitten/{name}
+  PUT - https://xxx.execute-api.us-east-1.amazonaws.com/dev/v1/kitten/{name}
+  DELETE - https://xxx.execute-api.us-east-1.amazonaws.com/dev/v1/kitten/{name}
 ```
 
 ## To remove the service:

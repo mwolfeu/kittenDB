@@ -15,7 +15,7 @@ This is completely working code based on the video: https://www.youtube.com/watc
   sls deploy --stage dev
 ```
 ## In the output you should see a section like:
-### Note the enpoint urls to use with curl or test-rest.http
+### Note the endpoint urls to use with curl or test-rest.http
 ```bash
 endpoints:
   POST - https://xxx.execute-api.us-east-1.amazonaws.com/dev/hello

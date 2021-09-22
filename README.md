@@ -1,3 +1,31 @@
+# Serverless CRUD Example
+
+Log in to AWS with your root credentials.  Serverless will invoke the browser to create IAM accounts if needed.
+
+## In a terminal:
+
+```bash
+  npm install -g serverless # (as root)
+  npm install aws-sdk --save  # (optional)
+  serverless create -u https://github.com/mwolfeu/kittenDB.git
+    # serverless may create an IAM account if needed and store the secrets in ~/.aws
+  cd kittenDB
+  sls deploy --stage dev
+```
+
+## To remove the service:
+
+```bash
+  serverless remove --dev
+```
+
+If you have VSCode with the extension "REST Client" use the .http file to issue the REST calls.  Alternatively, use a tool like curl.
+
+
+# ----------------------------
+# Serverless Boilerplate Below
+# ----------------------------
+
 <!--
 title: 'AWS NodeJS Example'
 description: 'This template demonstrates how to deploy a NodeJS function running on AWS Lambda using the traditional Serverless Framework.'
